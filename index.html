@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ✏️ CHANGE THIS: put your name in the page title -->
+    <title>YOUR NAME | GDGC</title>
+    <style>
+        :root {
+            --blue: #4285f4;
+            --red: #ea4335;
+            --yellow: #fbbc04;
+            --green: #34a853;
+            --ink: #202124;
+            --muted: #5f6368;
+            --bg: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: "Google Sans", "Product Sans", Roboto, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.5;
+        }
+
+        .stripe {
+            height: 8px;
+            background: linear-gradient(90deg,
+                    var(--blue) 0 25%, var(--red) 25% 50%, var(--yellow) 50% 75%, var(--green) 75% 100%);
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e8eaed;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+
+        .brackets {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .brackets .b1 {
+            color: var(--blue);
+        }
+
+        .brackets .b2 {
+            color: var(--red);
+        }
+
+        .brackets .b3 {
+            color: var(--yellow);
+        }
+
+        .brackets .b4 {
+            color: var(--green);
+        }
+
+        header span.label {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem 3rem;
+        }
+
+        .hero {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: 0 1px 3px rgba(60, 64, 67, .25);
+        }
+
+        .avatar {
+            flex: none;
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            border: 4px solid var(--yellow);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(1.6rem, 5vw, 2.4rem);
+        }
+
+        .role {
+            margin: .25rem 0 0;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            margin-top: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.25rem 1.25rem 1.5rem;
+            box-shadow: 0 1px 3px rgba(60, 64, 67, .25);
+            border-top: 6px solid var(--blue);
+        }
+
+        .card.red {
+            border-top-color: var(--red);
+        }
+
+        .card.yellow {
+            border-top-color: var(--yellow);
+        }
+
+        .card.green {
+            border-top-color: var(--green);
+        }
+
+        .card h2 {
+            margin: 0 0 .4rem;
+            font-size: .85rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: var(--muted);
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 1.15rem;
+        }
+
+        a {
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 1.5rem 1rem 2.5rem;
+            font-size: .95rem;
+        }
+
+        .dots span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 3px;
+        }
+
+        @media (max-width: 520px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stripe"></div>
+
+    <header>
+        <div class="brackets"><span class="b1">&lt;</span><span class="b2">&bull;</span><span
+                class="b3">&bull;</span><span class="b4">&gt;</span></div>
+        <span class="label">Google Developer Groups on Campus</span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="avatar" id="avatar">?</div>
+            <div>
+                <!-- ✏️ CHANGE THIS: replace YOUR NAME with your real name -->
+                <h1 id="name">Hi, I'm YOUR NAME</h1>
+                <!-- ✏️ CHANGE THIS: replace YOUR ROLE (for example: Computer Science student) -->
+                <p class="role">YOUR ROLE &middot; GDGC member</p>
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <h2>Major</h2>
+                <!-- ✏️ CHANGE THIS -->
+                <p>YOUR MAJOR</p>
+            </div>
+            <div class="card red">
+                <h2>Favorite programming language</h2>
+                <!-- ✏️ CHANGE THIS -->
+                <p>YOUR PROGRAMMING LANGUAGE</p>
+            </div>
+            <div class="card yellow">
+                <h2>Fun fact</h2>
+                <!-- ✏️ CHANGE THIS -->
+                <p>YOUR FUN FACT</p>
+            </div>
+            <div class="card green">
+                <h2>Find me on GitHub</h2>
+                <!-- ✏️ CHANGE THIS: replace YOUR-USERNAME in BOTH places -->
+                <p><a href="https://github.com/YOUR-USERNAME">github.com/YOUR-USERNAME</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="dots">
+            <span style="background:#4285f4"></span><span style="background:#ea4335"></span><span
+                style="background:#fbbc04"></span><span style="background:#34a853"></span>
+        </div>
+        <p>Built at the GDGC GitHub workshop</p>
+    </footer>
+
+    <!-- You do not need to edit this part. It makes the circle show your initials. -->
+    <script>
+        var text = document.getElementById("name").textContent.replace("Hi, I'm", "").trim();
+        var words = text.split(/\s+/).filter(Boolean);
+        var letters = words.length > 1
+            ? words[0][0] + words[words.length - 1][0]
+            : (words[0] ? words[0][0] : "?");
+        document.getElementById("avatar").textContent = letters.toUpperCase();
+    </script>
+</body>
+
+</html>
